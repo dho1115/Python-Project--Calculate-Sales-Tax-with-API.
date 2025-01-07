@@ -17,18 +17,23 @@ if __name__ == "__main__":
 
       while (finished == False) and (Budget > 1.99):
          print("Your current Budget is now:", colored(Budget, "light_green", attrs=["bold"]));
+
          ItemNumber, Quantity = map(lambda x: int(x), input("Enter the food item number (on the left) and the quantity you want to order => ").split());
-         ItemNumber = int(ItemNumber);
-         Quantity = int(Quantity);
-         print(f"\n{'='*51}\n")
+
+         print(f"\n{'='*51}\n");
+
          OrderResult = App(ItemNumber, Quantity, Budget, _orderID);
+
          if isinstance(OrderResult, dict): 
             Budget = OrderResult.get("Budget");
             _orderID+=1;
+         
          print(OrderResult, end=f"\n\n{'*'*51}\n\n");
-         isDone = input("Are you finished???");
+
+         isDone = input("Are you finished??? ");
          print();
          finished = False if isDone in ["no", "n"] else True;
+   
    except ValueError as err:
       print(f"Sorry... you MUST enter integers for itemNumber (you have {colored(ItemNumber, color='red', attrs=['bold'])}) and quantity (you have {colored(Quantity, color='red', attrs=['bold'])})!!! => {err}");
    except IndexError as err:
