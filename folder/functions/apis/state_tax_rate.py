@@ -16,5 +16,5 @@ def SalesTax(zip=88901):
          #response.text = [{"zip_code": "60639", "total_rate": "0.102500", "state_rate": "0.062500", "city_rate": "0.012500", "county_rate": "0.017500", "additional_rate": "0.010000"}] 
          return float(json.loads(response.text)[0]["state_rate"]); #MUST PARSE JSON!!!!!
       else: raise Exception()
-   except Exception:
-      return f"ERROR!!! {dict(message=response.text, statusCode=response.status_code)}";
+   except Exception as err:
+      return f"ERROR!!! {dict(message=response.text, statusCode=response.status_code, Exception=err)}";

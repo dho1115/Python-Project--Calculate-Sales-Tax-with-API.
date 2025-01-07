@@ -33,6 +33,6 @@ if __name__ == "__main__":
    except ValueError as err:
       print(f"Sorry... you MUST enter integers for itemNumber (you have {colored(ItemNumber, color='red', attrs=['bold'])}) and quantity (you have {colored(Quantity, color='red', attrs=['bold'])})!!! => {err}");
    except IndexError as err:
-      print(f"It appears you selected an item number that is NOT on the menu. We only have 12 items and you selected {ItemNumber} as an ItemNumber: {err}.");
+      print(f"It appears you selected an item number that is NOT on the menu. We only have 12 items and you selected {colored(ItemNumber, color='red', attrs=['bold'])} as an ItemNumber: {err}.");
 
    
