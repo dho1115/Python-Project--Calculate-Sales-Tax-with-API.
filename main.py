@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
       input("Press any key to continue with your order...")
 
-      ItemNumber, Quantity, _orderID, finished = 0, 0, 1, False;
+      ItemNumber, Quantity, _orderID, finished = 0, 0, 1, False; #variables.
 
       try:
          Budget:float = float(57.00);
