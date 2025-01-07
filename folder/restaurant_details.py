@@ -1,0 +1,1 @@
+YummyTummyDetails = dict(name="Yummy Tummy Restaurant", address="1105 Las Vegas Strip", city="Las Vegas", state="NV", zip=88901, phone=111-2223456)
