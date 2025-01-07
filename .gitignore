@@ -1,0 +1,10 @@
+./folder/functions/apis/.env
+.functions/apis/.env
+.env
+./api/.env
+/apis/.env
+
+./folder/__pycache__
+./folder/functions/__pycache__
+__pycache__
+./__pycache__
