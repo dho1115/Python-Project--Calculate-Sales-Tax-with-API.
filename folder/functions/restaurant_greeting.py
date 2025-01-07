@@ -14,9 +14,27 @@ def RestaurantGreeting():
    sleep(1.75)
    return;
 
-def GreetingInterface():
+MenuTitle = colored(f"\n{' '*35}OUR CURRENT MENU ITEMS!!!\n", on_color='on_light_yellow', attrs=["bold"]);
+
+def colorMenu():
+   coloredMenu = [];
+
+   for i in Menu:
+      if i[0]%2==0:
+         i = colored(i, "light_magenta", attrs=["bold"])
+         print(i)
+      else:
+         i = colored(i, "light_yellow", attrs=["bold"])
+         print(i)
+   
+   coloredMenu = [*coloredMenu, i]
+
+   return coloredMenu;
+
+
+def GreetingInterface(): 
    RestaurantGreeting();
-   print(f"\n{'*'*15}\n");
-   print("OUR CURRENT MENU!!!");
-   print(Menu)   
+   print();
+   print(MenuTitle)
+   print(colorMenu())
 
