@@ -2,7 +2,7 @@ from pyfiglet import Figlet;
 from time import sleep;
 from colorama import init;
 from termcolor import colored;
-from folder.menu import Menu;
+from folder.menu import Menu; #regular menu (no color).
 
 init();
 
@@ -16,7 +16,7 @@ def RestaurantGreeting():
 
 MenuTitle = colored(f"\n{' '*35}OUR CURRENT MENU ITEMS!!!\n", on_color='on_light_yellow', attrs=["bold"]);
 
-def colorMenu():
+def colorMenu(): #menu in color.
    coloredMenu = [];
 
    for i in Menu:

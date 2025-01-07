@@ -4,11 +4,11 @@ import os;
 import json;
 
 load_dotenv();
-api_key = os.getenv("api_key");
+api_key = os.getenv("api_key"); #my API Key that is hidden inside the .env file.
 
 def SalesTax(zip=88901):
    zip_code = zip
-   api_url = 'https://api.api-ninjas.com/v1/salestax?zip_code={}'.format(zip_code)
+   api_url = 'https://api.api-ninjas.com/v1/salestax?zip_code={}'.format(zip_code) #courtesy of api-ninjas.com. You can get your own api key there.
    try:
       response = get(api_url, headers={'X-Api-Key': api_key});
 

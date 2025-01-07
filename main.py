@@ -7,7 +7,7 @@ if __name__ == "__main__":
    def main():
       init();
 
-      GreetingInterface();
+      GreetingInterface(); #has greeting.
 
       input("Press any key to continue with your order...")
 
@@ -16,7 +16,7 @@ if __name__ == "__main__":
       try:
          Budget:float = float(57.00);
 
-         while (finished == False) and (Budget > 1.99):
+         while (finished == False) and (Budget > 1.99): #Loop that ends when finished == True OR Budget falls below 1.99 (the lowest price on the menu is $1.99).
             print("Your current Budget is now:", colored(Budget, "light_green", attrs=["bold"]));
 
             ItemNumber, Quantity = map(lambda x: int(x), input("Enter the food item number (on the left) and the quantity you want to order => ").split());
@@ -40,6 +40,6 @@ if __name__ == "__main__":
       except IndexError as err:
          print(f"It appears you selected an item number that is NOT on the menu. We only have 12 items and you selected {colored(ItemNumber, color='red', attrs=['bold'])} as an ItemNumber: {err}.");
 
-   main()
+   main() #calling main function here.
 
    
