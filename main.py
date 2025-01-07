@@ -1,5 +1,4 @@
 if __name__ == "__main__":
-   from folder.menu import Menu;
    from folder.functions.restaurant_greeting import GreetingInterface;
    from folder.functions.app import App;
    from termcolor import colored;
@@ -8,17 +7,17 @@ if __name__ == "__main__":
    init();
 
    GreetingInterface();
+
    input("Press any key to continue with your order...")
-   ItemNumber, Quantity = 0, 0;
-   _orderID = 1;
-   finished = False;
+
+   ItemNumber, Quantity, _orderID, finished = 0, 0, 1, False;
 
    try:
       Budget:float = float(57.00);
 
       while (finished == False) and (Budget > 1.99):
          print("Your current Budget is now:", colored(Budget, "light_green", attrs=["bold"]));
-         ItemNumber, Quantity = input("Enter the food item number (on the left) and the quantity you want to order => ").split();
+         ItemNumber, Quantity = map(lambda x: int(x), input("Enter the food item number (on the left) and the quantity you want to order => ").split());
          ItemNumber = int(ItemNumber);
          Quantity = int(Quantity);
          print(f"\n{'='*51}\n")
