@@ -6,7 +6,7 @@ import json;
 load_dotenv();
 api_key = os.getenv("api_key");
 
-def SalesTax(zip=60639):
+def SalesTax(zip=88901):
    zip_code = zip
    api_url = 'https://api.api-ninjas.com/v1/salestax?zip_code={}'.format(zip_code)
    try:
